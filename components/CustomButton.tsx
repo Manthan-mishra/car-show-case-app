@@ -3,18 +3,24 @@
 import { ICustomButton } from "@/types";
 import Image from "next/image";
 
-const CustomButton = ({title,containerStyles,handleClick
-}:ICustomButton) => {
+const CustomButton = ({
+  title,
+  containerStyles,
+  handleClick,
+  btnType,
+}: ICustomButton) => {
   // console.log("props ",props);
-    
+
   return (
     <button
       disabled={false}
-      type={"button"}
+      type={btnType || "button"}
       className={`custom-btn ${containerStyles}`}
-      onClick={() => {handleClick}}
+      onClick={() => {
+        handleClick;
+      }}
     >
-     <span className={`flex-1`}>{title}</span>
+      <span className={`flex-1`}>{title}</span>
     </button>
   );
 };
