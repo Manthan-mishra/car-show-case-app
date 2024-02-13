@@ -6,3 +6,7 @@ export interface ICustomButton {
   handleClick?: MouseEventHandler<HTMLButtonElement>;
   btnType?: "button" | "submit";
 }
+
+export interface ICustomFilter{
+  title:string;
+}
